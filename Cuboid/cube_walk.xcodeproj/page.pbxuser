@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 154A1AE614605221009838A9 /* PW */;
+		activeTarget = 8DD76FA90486AB0100D96B5E /* PW */;
+		addToTargets = (
+			8DD76FA90486AB0100D96B5E /* PW */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 154A1AF31460522C009838A9 /* Code sense */;
+		executables = (
+			154A1AE614605221009838A9 /* PW */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					1361,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1473,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1433,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 416153383;
+			PBXWorkspaceStateSaveDate = 416153383;
+		};
+		perUserProjectItems = {
+			1534AF7C14F6B3DC00553F55 /* PBXTextBookmark */ = 1534AF7C14F6B3DC00553F55 /* PBXTextBookmark */;
+			153754C618CE019E0064C2FC /* PBXTextBookmark */ = 153754C618CE019E0064C2FC /* PBXTextBookmark */;
+			153754C718CE019E0064C2FC /* PBXTextBookmark */ = 153754C718CE019E0064C2FC /* PBXTextBookmark */;
+			153754C818CE019E0064C2FC /* PBXTextBookmark */ = 153754C818CE019E0064C2FC /* PBXTextBookmark */;
+			153754C918CE019E0064C2FC /* PBXTextBookmark */ = 153754C918CE019E0064C2FC /* PBXTextBookmark */;
+			153754CA18CE019E0064C2FC /* PBXTextBookmark */ = 153754CA18CE019E0064C2FC /* PBXTextBookmark */;
+			154A1B4814616569009838A9 /* PBXTextBookmark */ = 154A1B4814616569009838A9 /* PBXTextBookmark */;
+			158EF80717E9FEB9000C2C1C /* PBXTextBookmark */ = 158EF80717E9FEB9000C2C1C /* PBXTextBookmark */;
+			158EFB2C17FC5F38000C2C1C /* PBXTextBookmark */ = 158EFB2C17FC5F38000C2C1C /* PBXTextBookmark */;
+			158EFC0517FDF7CB000C2C1C /* PBXTextBookmark */ = 158EFC0517FDF7CB000C2C1C /* PBXTextBookmark */;
+			158EFC0617FDF7CB000C2C1C /* PBXTextBookmark */ = 158EFC0617FDF7CB000C2C1C /* PBXTextBookmark */;
+			158EFC271802BA3B000C2C1C /* PBXTextBookmark */ = 158EFC271802BA3B000C2C1C /* PBXTextBookmark */;
+			15A889E7146858EC00CB99A6 /* PBXTextBookmark */ = 15A889E7146858EC00CB99A6 /* PBXTextBookmark */;
+			15C3DCD414C73A1900F5F073 /* PBXTextBookmark */ = 15C3DCD414C73A1900F5F073 /* PBXTextBookmark */;
+			15C3DD9A14D3069C00F5F073 /* PBXTextBookmark */ = 15C3DD9A14D3069C00F5F073 /* PBXTextBookmark */;
+			15C3DDAD14D31DBA00F5F073 /* PBXTextBookmark */ = 15C3DDAD14D31DBA00F5F073 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 154A1AF21460522C009838A9 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* main.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 3042}}";
+			sepNavSelRange = "{2693, 0}";
+			sepNavVisRange = "{1704, 1329}";
+			sepNavWindowFrame = "{{467, 83}, {1095, 1095}}";
+		};
+	};
+	1534AF7C14F6B3DC00553F55 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1534AF7D14F6B3DC00553F55 /* weight_evolution.m */;
+		name = "weight_evolution.m: 20";
+		rLen = 0;
+		rLoc = 365;
+		rType = 0;
+		vrLen = 1226;
+		vrLoc = 0;
+	};
+	1534AF7D14F6B3DC00553F55 /* weight_evolution.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = weight_evolution.m;
+		path = /Network/Servers/mac0.cns.ox.ac.uk/Volumes/Data/Users/page/Code/matlab/weight_evolution.m;
+		sourceTree = "<absolute>";
+	};
+	153754C618CE019E0064C2FC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 154A1AFA146052AE009838A9 /* calculate.h */;
+		name = "calculate.h: 17";
+		rLen = 0;
+		rLoc = 600;
+		rType = 0;
+		vrLen = 1156;
+		vrLoc = 0;
+	};
+	153754C718CE019E0064C2FC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.c */;
+		name = "main.c: 158";
+		rLen = 0;
+		rLoc = 2693;
+		rType = 0;
+		vrLen = 1329;
+		vrLoc = 1704;
+	};
+	153754C818CE019E0064C2FC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 154A1AFE146052E2009838A9 /* init.c */;
+		name = "init.c: 316";
+		rLen = 0;
+		rLoc = 8250;
+		rType = 0;
+		vrLen = 1543;
+		vrLoc = 8105;
+	};
+	153754C918CE019E0064C2FC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 154A1AFB146052AE009838A9 /* calculate.c */;
+		name = "calculate.c: 104";
+		rLen = 0;
+		rLoc = 2243;
+		rType = 0;
+		vrLen = 1524;
+		vrLoc = 1912;
+	};
+	153754CA18CE019E0064C2FC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 154A1AFB146052AE009838A9 /* calculate.c */;
+		name = "calculate.c: 307";
+		rLen = 0;
+		rLoc = 6444;
+		rType = 0;
+		vrLen = 1606;
+		vrLoc = 5584;
+	};
+	154A1AE614605221009838A9 /* PW */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+			YES,
+		);
+		argumentStrings = (
+			"-fname mtToyParams.dat",
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = PW;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	154A1AF21460522C009838A9 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	154A1AF31460522C009838A9 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	154A1AF41460524C009838A9 /* data.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 1508}}";
+			sepNavSelRange = "{476, 0}";
+			sepNavVisRange = "{0, 836}";
+			sepNavWindowFrame = "{{15, 91}, {1095, 1087}}";
+		};
+	};
+	154A1AF514605273009838A9 /* file_io.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 914}}";
+			sepNavSelRange = "{593, 0}";
+			sepNavVisRange = "{0, 601}";
+		};
+	};
+	154A1AF614605273009838A9 /* file_io.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 2314}}";
+			sepNavSelRange = "{1226, 468}";
+			sepNavVisRange = "{591, 1226}";
+			sepNavWindowFrame = "{{15, 91}, {1095, 1087}}";
+		};
+	};
+	154A1AFA146052AE009838A9 /* calculate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 914}}";
+			sepNavSelRange = "{600, 0}";
+			sepNavVisRange = "{0, 1156}";
+			sepNavWindowFrame = "{{15, 88}, {1095, 1090}}";
+		};
+	};
+	154A1AFB146052AE009838A9 /* calculate.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 5161}}";
+			sepNavSelRange = "{6444, 0}";
+			sepNavVisRange = "{5584, 1606}";
+			sepNavWindowFrame = "{{203, 212}, {1234, 965}}";
+		};
+	};
+	154A1AFD146052E2009838A9 /* init.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 905}}";
+			sepNavSelRange = "{421, 0}";
+			sepNavVisRange = "{0, 510}";
+		};
+	};
+	154A1AFE146052E2009838A9 /* init.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 5395}}";
+			sepNavSelRange = "{8250, 0}";
+			sepNavVisRange = "{8105, 1543}";
+			sepNavWindowFrame = "{{157, 184}, {1234, 965}}";
+		};
+	};
+	154A1B3B1460625A009838A9 /* oscillations_plots_edited.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = oscillations_plots_edited.m;
+		path = /Network/Servers/mac0.cns.ox.ac.uk/Volumes/Data/Users/page/Code/matlab/oscillations_plots_edited.m;
+		sourceTree = "<absolute>";
+	};
+	154A1B4814616569009838A9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 154A1B3B1460625A009838A9 /* oscillations_plots_edited.m */;
+		name = "oscillations_plots_edited.m: 71";
+		rLen = 0;
+		rLoc = 1966;
+		rType = 0;
+		vrLen = 1228;
+		vrLoc = 3025;
+	};
+	158EF80717E9FEB9000C2C1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 158EF80817E9FEB9000C2C1C /* initialisegsl.c */;
+		name = "initialisegsl.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2357;
+		vrLoc = 0;
+	};
+	158EF80817E9FEB9000C2C1C /* initialisegsl.c */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.c;
+		name = initialisegsl.c;
+		path = "/Network/Servers/mac0.cns.ox.ac.uk/Volumes/Data/Users/page/Public/Drop Box/initialisegsl.c";
+		sourceTree = "<absolute>";
+	};
+	158EFB2C17FC5F38000C2C1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 154A1AF514605273009838A9 /* file_io.h */;
+		name = "file_io.h: 22";
+		rLen = 0;
+		rLoc = 593;
+		rType = 0;
+		vrLen = 601;
+		vrLoc = 0;
+	};
+	158EFC0517FDF7CB000C2C1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 154A1AF614605273009838A9 /* file_io.c */;
+		name = "file_io.c: 82";
+		rLen = 468;
+		rLoc = 1226;
+		rType = 0;
+		vrLen = 1226;
+		vrLoc = 591;
+	};
+	158EFC0617FDF7CB000C2C1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 154A1AF41460524C009838A9 /* data.h */;
+		name = "data.h: 40";
+		rLen = 0;
+		rLoc = 476;
+		rType = 0;
+		vrLen = 836;
+		vrLoc = 0;
+	};
+	158EFC271802BA3B000C2C1C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 154A1AFD146052E2009838A9 /* init.h */;
+		name = "init.h: 15";
+		rLen = 0;
+		rLoc = 421;
+		rType = 0;
+		vrLen = 510;
+		vrLoc = 0;
+	};
+	15A889D614684A6C00CB99A6 /* big_oscillations_plots_edited_nosave.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = big_oscillations_plots_edited_nosave.m;
+		path = /Network/Servers/mac0.cns.ox.ac.uk/Volumes/Data/Users/page/Code/matlab/big_oscillations_plots_edited_nosave.m;
+		sourceTree = "<absolute>";
+	};
+	15A889E7146858EC00CB99A6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15A889D614684A6C00CB99A6 /* big_oscillations_plots_edited_nosave.m */;
+		name = "big_oscillations_plots_edited_nosave.m: 425";
+		rLen = 0;
+		rLoc = 13686;
+		rType = 0;
+		vrLen = 686;
+		vrLoc = 13301;
+	};
+	15C3DCD414C73A1900F5F073 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15C3DCD514C73A1900F5F073 /* external_oscillations.m */;
+		name = "external_oscillations.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1420;
+		vrLoc = 0;
+	};
+	15C3DCD514C73A1900F5F073 /* external_oscillations.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = external_oscillations.m;
+		path = /Network/Servers/mac0.cns.ox.ac.uk/Volumes/Data/Users/page/pre_wired_gaussian_oscillator/external_oscillations/matlab_proof/external_oscillations.m;
+		sourceTree = "<absolute>";
+	};
+	15C3DD9A14D3069C00F5F073 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15C3DD9B14D3069C00F5F073 /* weights_plots.m */;
+		name = "weights_plots.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 691;
+		vrLoc = 0;
+	};
+	15C3DD9B14D3069C00F5F073 /* weights_plots.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = weights_plots.m;
+		path = /Network/Servers/mac0.cns.ox.ac.uk/Volumes/Data/Users/page/Code/matlab/weights_plots.m;
+		sourceTree = "<absolute>";
+	};
+	15C3DDA014D3069C00F5F073 /* plot_touretzky.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = plot_touretzky.m;
+		path = /Network/Servers/mac0.cns.ox.ac.uk/Volumes/Data/Users/page/Code/matlab/plot_touretzky.m;
+		sourceTree = "<absolute>";
+	};
+	15C3DDAD14D31DBA00F5F073 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 15C3DDA014D3069C00F5F073 /* plot_touretzky.m */;
+		name = "plot_touretzky.m: 39";
+		rLen = 0;
+		rLoc = 1172;
+		rType = 0;
+		vrLen = 1771;
+		vrLoc = 0;
+	};
+	8DD76FA90486AB0100D96B5E /* PW */ = {
+		activeExec = 0;
+		executables = (
+			154A1AE614605221009838A9 /* PW */,
+		);
+	};
+}

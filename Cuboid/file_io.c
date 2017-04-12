@@ -1,0 +1,333 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+#include "file_io.h"
+
+FILE* file_open(const char *fname, const char *format)
+{
+	FILE *fptr;
+	
+	fptr = fopen(fname, format);
+	
+	if(!fptr)
+	{
+		fprintf(stderr, "\nCould not open file %s\n", fname);
+		exit(1);
+	}
+	
+	return fptr;
+}
+
+
+void trim_space(char *str)
+{
+	char *end;
+	
+	end = str + (strlen(str)-1);
+	
+	while(isspace(*str))
+		str++;
+	
+	while((end>=str)&&(isspace(*end)))
+		end--;
+	
+	*(++end) = '\0';
+	
+	return;
+}
+
+
+void save_rates_activations(data *dptr, params *pptr)
+{
+    
+    /* This function saves the HD cell rates and activations over timecourse of simulation
+        N.B. - This model NO LONGER saves activations and rates every 100th timestep  */
+    
+    
+	FILE *fptr;
+	
+	/* Save HD Rates */
+	
+	fptr = file_open("HDRates.bdat", "wb");
+	
+	fwrite(&(dptr->rates_HD_time[0][0]), sizeof(float), pptr->num_HD_cells*(pptr->timesteps), fptr);
+	
+	fclose(fptr);
+	
+
+	/* Save HD Activations */
+	
+	fptr = file_open("HDActivations.bdat", "wb");
+	
+	fwrite(&(dptr->activations_HD_time[0][0]), sizeof(float), pptr->num_HD_cells*(pptr->timesteps), fptr);
+	
+	fclose(fptr);
+    		
+	return;
+}
+
+void save_prefdirs(data *dptr, params *pptr)
+{
+    
+    /* This function saves preferred directions */
+    
+    FILE *fptr;
+    
+    fptr = file_open("PrefDirs.bdat", "wb");
+    
+    fwrite(&(dptr->favoured_view[0]), sizeof(float), pptr->num_HD_cells, fptr);
+
+    fclose(fptr);
+ 
+    return;
+    
+}
+
+void save_input(data *dptr, params *pptr)
+{
+    
+    /* This function saves network inputs over entire simulation */
+    
+	FILE *fptr;
+	
+	fptr = file_open("Input_Location.bdat", "wb");
+    fwrite(&(dptr->input_location_time[0][0]), sizeof(float), pptr->num_HD_cells*(pptr->timesteps), fptr);
+	
+	fclose(fptr);
+    
+    fptr = file_open("combined_yaw_input.bdat", "wb");
+    fwrite(&(dptr->combined_yaw_input_location_time[0][0]), sizeof(float), pptr->num_HD_cells*(pptr->timesteps), fptr);
+    
+    fclose(fptr);
+    
+    //Saving the ideal and actual increments
+    
+    fptr = file_open("IdealIncrement.bdat", "wb");
+    fwrite(&(dptr->ideal_increment[0]), sizeof(float), pptr->path_timesteps,fptr);
+    
+    fclose(fptr);
+    
+    fptr = file_open("ActualIncrement.bdat", "wb");
+    fwrite(&(dptr->actual_increment[0]), sizeof(float), pptr->path_timesteps,fptr);
+    
+    fclose(fptr);
+    
+    //saving reference vector
+    fptr = file_open("refvecs.bdat", "wb");
+    fwrite(&(dptr->refVec_time[0][0]), sizeof(double), 3*(pptr->path_timesteps), fptr);
+    
+    fclose(fptr);
+    
+    //saving rotated reference vector
+    fptr = file_open("rotated refvecs.bdat", "wb");
+    fwrite(&(dptr->rotated_refVec_time[0][0]), sizeof(double), 3*(pptr->path_timesteps), fptr);
+    
+    fclose(fptr);
+    
+    //saving rotated heading vector
+    fptr = file_open("rotated headings.bdat", "wb");
+    fwrite(&(dptr->rotated_heading_time[0][0]), sizeof(double), 3*(pptr->path_timesteps), fptr);
+    
+    fclose(fptr);
+   
+   
+	
+	return;
+}
+
+
+void save_pvector(data*dptr, params *pptr)
+{
+    
+    /* This function saves Pvector over entire simulation */
+    
+    FILE *fptr;
+    
+    fptr = file_open("Pvector.bdat", "wb");
+    fwrite(&(dptr->pvector_time[0]), sizeof(float), pptr->path_timesteps, fptr);
+    
+    fclose(fptr);
+    
+    
+    fptr = file_open("InputPvector.bdat", "wb");
+    
+    fwrite(&(dptr->combined_input_pvector_time[0]), sizeof(float), pptr->path_timesteps,fptr);
+           
+    
+    fclose(fptr);
+    
+    fptr = file_open("startangle.bdat", "wb");
+    fwrite(&(dptr->start_angle[0]), sizeof(double), pptr->path_timesteps, fptr);
+    
+    fclose(fptr);
+
+
+    
+}
+
+void load_full_RC(connect *cptr, params *pptr)
+{
+    
+    /* This unused code is in case of a situation in which each HD cell is not connected to every other HD cell
+    (i.e. in situations with incomplete connectivity) I've left it in, in case it's needed someday */
+     
+     
+	int post,pre;
+	int synapse;
+	
+	for(post=0; post<pptr->num_HD_cells; post++)
+	{
+	
+		for(pre=0; pre<pptr->num_HD_cells; pre++)
+		{
+			
+			cptr->full_RC[post][pre] = 0.0;
+			
+		}
+	}
+	
+		
+	for(post=0; post<pptr->num_HD_cells; post++)
+	{
+		for(pre=0; pre<cptr->num_RC_connections; pre++)
+		{
+			synapse = cptr->RC_connections[post][pre];
+			
+			cptr->full_RC[post][synapse] = cptr->RC_weights[post][pre];
+			
+		}
+	}
+	
+}
+
+
+void save_RCweights(connect *cptr, params *pptr)
+{
+    /* This code writes the RC weight structure to file. It works differently if connectivity is incomplete */
+    
+	FILE *fptr;
+	
+	fptr = file_open("RCweights.bdat","wb");
+	/* IF USING INCOMPLETE CONNECTIVITY DO THIS:
+    
+    fwrite(&(cptr->full_RC[0][0]), sizeof(float), pptr->num_HD_cells*pptr->num_HD_cells, fptr); */
+	
+    fwrite(&(cptr->RC_weights[0][0]), sizeof(float), pptr->num_HD_cells*pptr->num_HD_cells, fptr);
+    
+	fclose(fptr);
+	
+	return;
+	
+}
+
+void read_in_path(params *pptr, data *dptr)
+{
+    /* This function reads in rat's headings and positions over time from text file as generated by sphere_walk.m */
+    
+    FILE *fptr;
+    int counter;
+    
+    //Reading positions
+    
+    fptr = fopen("positions_x.txt","r");
+    counter = 0;
+    
+    if(fptr != NULL)
+    {
+        while ( fscanf(fptr,"%f",&dptr->positions_x[counter]) !=EOF )
+        {
+            counter++;
+        }
+    }else{
+        printf("Input file not found (positon x)\n");
+        exit(1);
+    }
+    fclose(fptr);
+    
+    fptr = fopen("positions_y.txt","r");
+    counter = 0;
+    
+    if(fptr != NULL)
+    {
+        while ( fscanf(fptr,"%f",&dptr->positions_y[counter]) !=EOF )
+        {
+            counter++;
+        }
+    }else{
+        printf("Input file not found (positon y)\n");
+        exit(1);
+    }
+    fclose(fptr);
+    
+    fptr = fopen("positions_z.txt","r");
+    counter = 0;
+    
+    if(fptr != NULL)
+    {
+        while ( fscanf(fptr,"%f",&dptr->positions_z[counter]) !=EOF )
+        {
+            counter++;
+        }
+    }else{
+        printf("Input file not found (positon z)\n");
+        exit(1);
+    }
+    fclose(fptr);
+    
+    //Reading headings
+    
+    fptr = fopen("headings_x.txt","r");
+    counter = 0;
+    
+    if(fptr != NULL)
+    {
+        while ( fscanf(fptr,"%f",&dptr->headings_x[counter]) !=EOF )
+        {
+            counter++;
+        }
+    }else{
+        printf("Input file not found (heading x)\n");
+        exit(1);
+    }
+    fclose(fptr);
+
+    fptr = fopen("headings_y.txt","r");
+    counter = 0;
+    
+    if(fptr != NULL)
+    {
+        while ( fscanf(fptr,"%f",&dptr->headings_y[counter]) !=EOF )
+        {
+            counter++;
+        }
+    }else{
+        printf("Input file not found (heading y)\n");
+        exit(1);
+    }
+    fclose(fptr);
+    
+    
+    fptr = fopen("headings_z.txt","r");
+    counter = 0;
+    
+    if(fptr != NULL)
+    {
+        while ( fscanf(fptr,"%f",&dptr->headings_z[counter]) !=EOF )
+        {
+            counter++;
+        }
+    }else{
+        printf("Input file not found (heading z)\n");
+        exit(1);
+    }
+    fclose(fptr);
+    
+        return;
+    
+}
+
+
+
+
